@@ -23,6 +23,24 @@
             opacity: 1;
             transform: translateY(0);
         }
+            /* Logo styling */
+        .logo svg {
+            height: 40px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .logo svg {
+                height: 32px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo svg {
+                height: 28px;
+            }
+        }
     </style>
     <style>
         /* Navigation bar fade effect */
@@ -37,15 +55,129 @@
             opacity: 1;
             transform: translateY(0);
         }
+            /* Logo styling */
+        .logo svg {
+            height: 40px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .logo svg {
+                height: 32px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo svg {
+                height: 28px;
+            }
+        }
     </style>
-</head>
+    <style>
+        /* Logo styling */
+        .navbar-logo {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-logo {
+                height: 32px;
+            }
+        }
+    </style>
+<style>
+    /* Logo styling */
+    .navbar-logo {
+        height: 40px;
+        width: auto;
+        display: block;
+    }
+    
+    @media (max-width: 768px) {
+        .navbar-logo {
+            height: 32px;
+        }
+    }
+</style><style id="actory-navbar-improvements">
+    /* Logo styling */
+    .navbar-logo {
+        height: 40px;
+        width: auto;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    
+    /* Enhanced Navbar Styles */
+    .header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+        background-color: white !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+    
+    .header.nav-hidden {
+        transform: translateY(-100%) !important;
+    }
+    
+    .header.nav-scrolled {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    /* Modern navigation link styles */
+    .main-nav a {
+        position: relative;
+        transition: color 0.3s ease;
+    }
+    
+    .main-nav a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #4D5DFF;
+        transition: width 0.3s ease;
+    }
+    
+    .main-nav a:hover::after {
+        width: 100%;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .navbar-logo {
+            height: 32px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .navbar-logo {
+            height: 28px;
+        }
+    }
+    
+    /* Adjust body padding to account for fixed header */
+    body {
+        padding-top: 80px !important; /* Adjust based on your header height */
+    }
+</style></head>
 <body>
     <header class="header">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="/">Actory.ai</a>
+                    <a href="/">
+                        <img src="assets/actory-logo.png" alt="Actory AI" class="navbar-logo" style="height: 40px; width: auto;">
+                    </a>
                 </div>
                 <nav class="main-nav">
                     <ul>
@@ -319,7 +451,25 @@
     #navbar-debug-toolbar.visible {
         display: block;
     }
-</style>
+        /* Logo styling */
+        .logo svg {
+            height: 40px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .logo svg {
+                height: 32px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo svg {
+                height: 28px;
+            }
+        }
+    </style>
 
 <!-- Debug Toolbar -->
 <div id="navbar-debug-toolbar">
@@ -410,8 +560,329 @@
     });
 </script>
 <!-- NAVBAR FADE EFFECT - END -->
-</body>
+<!-- IMPROVED NAVBAR - START -->
+<style id="navbar-improvements-css">
+    /* Modern Navbar Styles */
+    .header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+        background-color: white !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+    
+    .header.nav-hidden {
+        transform: translateY(-100%) !important;
+    }
+    
+    .header.nav-scrolled {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .header-content {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 16px 20px !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+    }
+    
+    .navbar-logo {
+        height: 40px !important;
+        width: auto !important;
+        display: block !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .main-nav ul {
+        display: flex !important;
+        gap: 30px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .main-nav li {
+        list-style: none !important;
+    }
+    
+    .main-nav a {
+        color: var(--text-color) !important;
+        font-weight: 500 !important;
+        text-decoration: none !important;
+        padding: 8px 0 !important;
+        position: relative !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .main-nav a:hover {
+        color: var(--primary-color) !important;
+    }
+    
+    .main-nav a::after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 0 !important;
+        height: 2px !important;
+        background-color: var(--primary-color) !important;
+        transition: width 0.3s ease !important;
+    }
+    
+    .main-nav a:hover::after {
+        width: 100% !important;
+    }
+    
+    /* Mobile menu button */
+    .mobile-menu-btn {
+        display: none !important;
+        background: none !important;
+        border: none !important;
+        cursor: pointer !important;
+        padding: 10px !important;
+    }
+    
+    .mobile-menu-btn span {
+        display: block !important;
+        width: 25px !important;
+        height: 3px !important;
+        background-color: var(--text-color) !important;
+        margin: 5px 0 !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    /* Adjust body padding to account for fixed header */
+    body {
+        padding-top: 80px !important; /* Adjust based on your header height */
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .navbar-logo {
+            height: 32px !important;
+        }
+        
+        .mobile-menu-btn {
+            display: block !important;
+        }
+        
+        .main-nav {
+            position: absolute !important;
+            top: 100% !important;
+            left: 0 !important;
+            right: 0 !important;
+            background-color: white !important;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+            padding: 20px !important;
+            max-height: 0 !important;
+            overflow: hidden !important;
+            transition: max-height 0.3s ease !important;
+        }
+        
+        .main-nav.active {
+            max-height: 300px !important;
+        }
+        
+        .main-nav ul {
+            flex-direction: column !important;
+            gap: 15px !important;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .navbar-logo {
+            height: 28px !important;
+        }
+        
+        .header-content {
+            padding: 12px 15px !important;
+        }
+    }
+</style>
+
+<script id="navbar-improvements-js">
+    // IMPROVED NAVIGATION BAR FUNCTIONALITY
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('[NAVBAR] Improved script initialized');
+        
+        // Get the header element
+        const header = document.querySelector('.header');
+        const mobileMenuBtn = document.createElement('button');
+        const mainNav = document.querySelector('.main-nav');
+        
+        if (!header) {
+            console.error('[NAVBAR] Header element not found!');
+            return;
+        }
+        
+        // Create mobile menu button
+        mobileMenuBtn.className = 'mobile-menu-btn';
+        mobileMenuBtn.innerHTML = '<span></span><span></span><span></span>';
+        mobileMenuBtn.setAttribute('aria-label', 'Toggle mobile menu');
+        
+        // Insert the mobile button before the nav
+        const headerContent = document.querySelector('.header-content');
+        headerContent.insertBefore(mobileMenuBtn, mainNav);
+        
+        // Variables to track scrolling
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+        
+        // Function to update header visibility
+        function updateHeaderVisibility() {
+            const currentScrollY = window.scrollY;
+            
+            // Add scrolled class when not at the top
+            if (currentScrollY > 10) {
+                header.classList.add('nav-scrolled');
+            } else {
+                header.classList.remove('nav-scrolled');
+            }
+            
+            // Show header when at the top
+            if (currentScrollY < 50) {
+                header.classList.remove('nav-hidden');
+            } 
+            // Hide when scrolling down, show when scrolling up
+            else {
+                if (currentScrollY > lastScrollY + 5) {
+                    // Scrolling DOWN - hide header
+                    header.classList.add('nav-hidden');
+                } else if (currentScrollY < lastScrollY - 5) {
+                    // Scrolling UP - show header
+                    header.classList.remove('nav-hidden');
+                }
+            }
+            
+            // Update last scroll position
+            lastScrollY = currentScrollY;
+            ticking = false;
+        }
+        
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            // Change button appearance
+            this.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        mainNav.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            });
+        });
+        
+        // Add scroll event listener with throttling
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    updateHeaderVisibility();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+        
+        // Force initial check
+        updateHeaderVisibility();
+        console.log('[NAVBAR] Improved navigation initialized');
+    });
+</script>
+<!-- IMPROVED NAVBAR - END -->
+<script id="actory-navbar-improvements">
+    // Enhanced Navigation Bar Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('[NAVBAR] Enhanced script initialized');
+        
+        // Get the header element
+        const header = document.querySelector('.header');
+        if (!header) {
+            console.error('[NAVBAR] Header element not found!');
+            return;
+        }
+        
+        // Variables to track scrolling
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+        
+        // Function to update header visibility
+        function updateHeaderVisibility() {
+            const currentScrollY = window.scrollY;
+            
+            // Add scrolled class when not at the top
+            if (currentScrollY > 10) {
+                header.classList.add('nav-scrolled');
+            } else {
+                header.classList.remove('nav-scrolled');
+            }
+            
+            // Show header when at the top
+            if (currentScrollY < 50) {
+                header.classList.remove('nav-hidden');
+            } 
+            // Hide when scrolling down, show when scrolling up
+            else {
+                if (currentScrollY > lastScrollY + 5) {
+                    // Scrolling DOWN - hide header
+                    header.classList.add('nav-hidden');
+                } else if (currentScrollY < lastScrollY - 5) {
+                    // Scrolling UP - show header
+                    header.classList.remove('nav-hidden');
+                }
+            }
+            
+            // Update last scroll position
+            lastScrollY = currentScrollY;
+            ticking = false;
+        }
+        
+        // Add scroll event listener with throttling
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    updateHeaderVisibility();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Account for fixed header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Force initial check
+        updateHeaderVisibility();
+        console.log('[NAVBAR] Enhanced navigation initialized');
+    });
+</script></body>
 </html>
+
+
+
+
+
 
 
 
