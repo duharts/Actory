@@ -543,3 +543,15 @@ section {
     transform: translateY(-100%) !important;
 }
 
+
+/* Navigation bar fade effect */
+.header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    transition: transform 0.4s ease !important;
+}
+
+.header.nav-hidden {
+    transform: translateY(-100%) !important;
+}

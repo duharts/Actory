@@ -561,173 +561,123 @@
 </script>
 <!-- NAVBAR FADE EFFECT - END -->
 <!-- IMPROVED NAVBAR - START -->
-<style id="navbar-improvements-css">
-    /* Modern Navbar Styles */
-    .header {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-        z-index: 9999 !important;
-        background-color: white !important;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
-        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-    }
-    
-    .header.nav-hidden {
-        transform: translateY(-100%) !important;
-    }
-    
-    .header.nav-scrolled {
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
-    }
-    
+<style id='navbar-improvements-css'>/* Improved Navbar Styles for Responsive Without Collapse */
+.header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.header.nav-hidden {
+    transform: translateY(-100%) !important;
+}
+
+.header.nav-scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.main-nav ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.main-nav a {
+    color: var(--text-color) !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    padding: 8px 10px !important;
+    font-size: 15px !important;
+    position: relative !important;
+    transition: all 0.3s ease !important;
+    white-space: nowrap !important;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color) !important;
+}
+
+.main-nav a::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 2px !important;
+    background-color: var(--primary-color) !important;
+    transition: width 0.3s ease !important;
+}
+
+.main-nav a:hover::after {
+    width: 100% !important;
+}
+
+/* Adjust body padding to account for fixed header */
+body {
+    padding-top: 80px !important;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
     .header-content {
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        padding: 16px 20px !important;
-        max-width: 1200px !important;
-        margin: 0 auto !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        padding: 10px 15px !important;
+    }
+    
+    .logo {
+        margin-bottom: 5px !important;
     }
     
     .navbar-logo {
-        height: 40px !important;
-        width: auto !important;
-        display: block !important;
-        transition: all 0.3s ease !important;
+        height: 32px !important;
     }
     
-    .main-nav ul {
-        display: flex !important;
-        gap: 30px !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    
-    .main-nav li {
-        list-style: none !important;
-    }
-    
-    .main-nav a {
-        color: var(--text-color) !important;
-        font-weight: 500 !important;
-        text-decoration: none !important;
-        padding: 8px 0 !important;
-        position: relative !important;
-        transition: all 0.3s ease !important;
-    }
-    
-    .main-nav a:hover {
-        color: var(--primary-color) !important;
-    }
-    
-    .main-nav a::after {
-        content: '' !important;
-        position: absolute !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        width: 0 !important;
-        height: 2px !important;
-        background-color: var(--primary-color) !important;
-        transition: width 0.3s ease !important;
-    }
-    
-    .main-nav a:hover::after {
+    .main-nav {
         width: 100% !important;
     }
     
-    /* Mobile menu button */
-    .mobile-menu-btn {
-        display: none !important;
-        background: none !important;
-        border: none !important;
-        cursor: pointer !important;
-        padding: 10px !important;
+    .main-nav ul {
+        justify-content: center !important;
     }
     
-    .mobile-menu-btn span {
-        display: block !important;
-        width: 25px !important;
-        height: 3px !important;
-        background-color: var(--text-color) !important;
-        margin: 5px 0 !important;
-        transition: all 0.3s ease !important;
+    .main-nav a {
+        padding: 6px 8px !important;
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-logo {
+        height: 28px !important;
     }
     
-    /* Adjust body padding to account for fixed header */
-    body {
-        padding-top: 80px !important; /* Adjust based on your header height */
+    .main-nav a {
+        padding: 5px 6px !important;
+        font-size: 13px !important;
     }
-    
-    /* Responsive styles */
-    @media (max-width: 768px) {
-        .navbar-logo {
-            height: 32px !important;
-        }
-        
-        .mobile-menu-btn {
-            display: block !important;
-        }
-        
-        .main-nav {
-            position: absolute !important;
-            top: 100% !important;
-            left: 0 !important;
-            right: 0 !important;
-            background-color: white !important;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
-            padding: 20px !important;
-            max-height: 0 !important;
-            overflow: hidden !important;
-            transition: max-height 0.3s ease !important;
-        }
-        
-        .main-nav.active {
-            max-height: 300px !important;
-        }
-        
-        .main-nav ul {
-            flex-direction: column !important;
-            gap: 15px !important;
-        }
-    }
-    
-    @media (max-width: 576px) {
-        .navbar-logo {
-            height: 28px !important;
-        }
-        
-        .header-content {
-            padding: 12px 15px !important;
-        }
-    }
-</style>
+}</style>
 
 <script id="navbar-improvements-js">
     // IMPROVED NAVIGATION BAR FUNCTIONALITY
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('[NAVBAR] Improved script initialized');
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log("[NAVBAR] Improved script initialized");
         
         // Get the header element
-        const header = document.querySelector('.header');
-        const mobileMenuBtn = document.createElement('button');
-        const mainNav = document.querySelector('.main-nav');
+        const header = document.querySelector(".header");
         
         if (!header) {
-            console.error('[NAVBAR] Header element not found!');
+            console.error("[NAVBAR] Header element not found!");
             return;
         }
-        
-        // Create mobile menu button
-        mobileMenuBtn.className = 'mobile-menu-btn';
-        mobileMenuBtn.innerHTML = '<span></span><span></span><span></span>';
-        mobileMenuBtn.setAttribute('aria-label', 'Toggle mobile menu');
-        
-        // Insert the mobile button before the nav
-        const headerContent = document.querySelector('.header-content');
-        headerContent.insertBefore(mobileMenuBtn, mainNav);
         
         // Variables to track scrolling
         let lastScrollY = window.scrollY;
@@ -739,23 +689,23 @@
             
             // Add scrolled class when not at the top
             if (currentScrollY > 10) {
-                header.classList.add('nav-scrolled');
+                header.classList.add("nav-scrolled");
             } else {
-                header.classList.remove('nav-scrolled');
+                header.classList.remove("nav-scrolled");
             }
             
             // Show header when at the top
             if (currentScrollY < 50) {
-                header.classList.remove('nav-hidden');
+                header.classList.remove("nav-hidden");
             } 
             // Hide when scrolling down, show when scrolling up
             else {
                 if (currentScrollY > lastScrollY + 5) {
                     // Scrolling DOWN - hide header
-                    header.classList.add('nav-hidden');
+                    header.classList.add("nav-hidden");
                 } else if (currentScrollY < lastScrollY - 5) {
                     // Scrolling UP - show header
-                    header.classList.remove('nav-hidden');
+                    header.classList.remove("nav-hidden");
                 }
             }
             
@@ -764,23 +714,8 @@
             ticking = false;
         }
         
-        // Mobile menu toggle
-        mobileMenuBtn.addEventListener('click', function() {
-            mainNav.classList.toggle('active');
-            // Change button appearance
-            this.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking a link
-        mainNav.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                mainNav.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
-            });
-        });
-        
         // Add scroll event listener with throttling
-        window.addEventListener('scroll', function() {
+        window.addEventListener("scroll", function() {
             if (!ticking) {
                 window.requestAnimationFrame(function() {
                     updateHeaderVisibility();
@@ -792,7 +727,7 @@
         
         // Force initial check
         updateHeaderVisibility();
-        console.log('[NAVBAR] Improved navigation initialized');
+        console.log("[NAVBAR] Improved navigation initialized");
     });
 </script>
 <!-- IMPROVED NAVBAR - END -->
@@ -878,6 +813,7 @@
     });
 </script></body>
 </html>
+
 
 
 
