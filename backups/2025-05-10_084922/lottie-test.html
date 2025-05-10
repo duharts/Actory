@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottie Animation Test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .container { display: flex; flex-wrap: wrap; gap: 20px; }
+        .animation-container { 
+            flex: 1; 
+            min-width: 300px; 
+            height: 300px; 
+            border: 1px solid #ccc; 
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+        }
+        .animation { width: 100%; height: 100%; }
+        h2 { margin-top: 0; }
+        .status { position: absolute; bottom: 10px; left: 20px; }
+        .success { color: green; }
+        .error { color: red; }
+        button { 
+            padding: 8px 16px; 
+            background: #4CAF50; 
+            color: white; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            margin-top: 20px;
+        }
+        button:hover { background: #45a049; }
+        code { 
+            display: block; 
+            background: #f5f5f5; 
+            padding: 10px; 
+            border-radius: 4px; 
+            white-space: pre-wrap;
+            margin-top: 10px;
+        }
+        .tools { margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Lottie Animation Test Page</h1>
+    <p>This page tests both Lottie animations to determine which one works correctly.</p>
+    
+    <div class="container">
+        <div class="animation-container">
+            <h2>New Animation</h2>
+            <div id="lottie1" class="animation"></div>
+            <div id="status1" class="status"></div>
+        </div>
+        
+        <div class="animation-container">
+            <h2>Fallback Animation</h2>
+            <div id="lottie2" class="animation"></div>
+            <div id="status2" class="status"></div>
+        </div>
+    </div>
+    
+    <div class="tools">
+        <h2>Implementation Code</h2>
+        <p>Copy this code to implement the working animation:</p>
+        
+        <button id="copyBtn1">Copy New Animation Code</button>
+        <code id="code1">
+lottie.loadAnimation({
+    container: document.getElementById('lottie-container'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://lottie.host/b883cdd8-359d-4d58-9311-2727030d937f/o5b67G5Wpn.json'
+});
+        </code>
+        
+        <button id="copyBtn2">Copy Fallback Animation Code</button>
+        <code id="code2">
+lottie.loadAnimation({
+    container: document.getElementById('lottie-container'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://lottie.host/d9d1e455-cbef-4f6b-8bdf-d13a1990b447/8niKT6PqV8.lottie'
+});
+        </code>
+        
+        <h3>Troubleshooting Tips</h3>
+        <ul>
+            <li>Make sure the Lottie URL is accessible from your server</li>
+            <li>Check for CORS issues if animation doesn't load</li>
+            <li>Consider hosting the animation file locally</li>
+            <li>Verify the lottie-web library is loaded correctly</li>
+        </ul>
+    </div>
+
+    <script>
+        // Load first animation
+        const anim1 = lottie.loadAnimation({
+            container: document.getElementById('lottie1'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://lottie.host/b883cdd8-359d-4d58-9311-2727030d937f/o5b67G5Wpn.json'
+        });
+        
+        anim1.addEventListener('data_ready', function() {
+            document.getElementById('status1').innerHTML = '? Animation loaded successfully';
+            document.getElementById('status1').className = 'status success';
+        });
+        
+        anim1.addEventListener('data_failed', function() {
+            document.getElementById('status1').innerHTML = '? Failed to load animation';
+            document.getElementById('status1').className = 'status error';
+        });
+        
+        // Load second animation
+        const anim2 = lottie.loadAnimation({
+            container: document.getElementById('lottie2'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://lottie.host/d9d1e455-cbef-4f6b-8bdf-d13a1990b447/8niKT6PqV8.lottie'
+        });
+        
+        anim2.addEventListener('data_ready', function() {
+            document.getElementById('status2').innerHTML = '? Animation loaded successfully';
+            document.getElementById('status2').className = 'status success';
+        });
+        
+        anim2.addEventListener('data_failed', function() {
+            document.getElementById('status2').innerHTML = '? Failed to load animation';
+            document.getElementById('status2').className = 'status error';
+        });
+        
+        // Copy button functionality
+        document.getElementById('copyBtn1').addEventListener('click', function() {
+            navigator.clipboard.writeText(document.getElementById('code1').textContent.trim())
+                .then(() => alert('Code copied to clipboard!'));
+        });
+        
+        document.getElementById('copyBtn2').addEventListener('click', function() {
+            navigator.clipboard.writeText(document.getElementById('code2').textContent.trim())
+                .then(() => alert('Code copied to clipboard!'));
+        });
+    </script>
+</body>
+</html>

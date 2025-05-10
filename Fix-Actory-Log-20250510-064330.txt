@@ -1,0 +1,45 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20250510064330
+Username: TABLET-48RTKTC8\Duhar
+RunAs User: TABLET-48RTKTC8\Duhar
+Configuration Name: 
+Machine: TABLET-48RTKTC8 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 16008
+PSVersion: 5.1.19041.5737
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.5737
+BuildVersion: 10.0.19041.5737
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\Duhar\OneDrive\Desktop\Actory\actory-landing\Fix-Actory-Log-20250510-064330.txt
+Transcript started. Logging to: C:\Users\Duhar\OneDrive\Desktop\Actory\actory-landing\Fix-Actory-Log-20250510-064330.txt
+===============================================
+ Actory.ai Safe Project Fixer Script
+===============================================
+
+Project Root: C:\Users\Duhar\OneDrive\Desktop\Actory\actory-landing
+Created backup directory: C:\Users\Duhar\OneDrive\Desktop\Actory\actory-landing\backups-20250510-064330
+
+===============================================
+ Starting File Creation/Update Process
+===============================================
+
+Backed up: C:\Users\Duhar\OneDrive\Desktop\Actory\actory-landing\src\app\page.tsx to C:\Users\Duhar\OneDrive\Desktop\Actory\actory-landing\backups-20250510-064330\src\app\page.tsx
+Fixed/Created: src/app/page.tsx
+
+WARNING: Missing content variable: layoutContent. Skipping src/app/layout.tsx.
+
+WARNING: Missing content variable: globalCssContent. Skipping src/app/globals.css.
+
+===============================================
+ Script Completed Successfully
+===============================================
+**********************
+Windows PowerShell transcript end
+End time: 20250510064330
+**********************
