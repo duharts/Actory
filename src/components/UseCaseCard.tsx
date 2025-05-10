@@ -1,4 +1,4 @@
-﻿import React, { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 interface UseCaseCardProps {
   icon: ReactNode;
@@ -6,14 +6,16 @@ interface UseCaseCardProps {
   description: string;
 }
 
-const UseCaseCard = ({ icon, title, description }: UseCaseCardProps) => (
-  <div className="p-6 border border-gray-200 rounded-xl bg-white">
-    <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-      {icon}
+const UseCaseCard = ({ icon, title, description }: UseCaseCardProps) => {
+  return (
+    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+      <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-gray-100">
+        {icon}
+      </div>
+      <h3 className="text-lg font-medium text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
     </div>
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </div>
-);
+  );
+};
 
 export default UseCaseCard;

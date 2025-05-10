@@ -38,3 +38,7 @@ const LottieAnimation = ({ animationUrl, height = 'h-64 md:h-96' }: LottieAnimat
 };
 
 export default LottieAnimation;
+
+
+
+

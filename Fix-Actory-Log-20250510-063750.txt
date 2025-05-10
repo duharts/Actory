@@ -1,0 +1,76 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20250510063750
+Username: TABLET-48RTKTC8\Duhar
+RunAs User: TABLET-48RTKTC8\Duhar
+Configuration Name: 
+Machine: TABLET-48RTKTC8 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 16008
+PSVersion: 5.1.19041.5737
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.5737
+BuildVersion: 10.0.19041.5737
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\Duhar\OneDrive\Desktop\Actory\actory-landing\Fix-Actory-Log-20250510-063750.txt
+Transcript started. Logging to: C:\Users\Duhar\OneDrive\Desktop\Actory\actory-landing\Fix-Actory-Log-20250510-063750.txt
+===============================================
+ Actory.ai Project Complete Fixer Script
+===============================================
+
+Project Root: C:\Users\Duhar\OneDrive\Desktop\Actory\actory-landing
+Created backup directory: C:\Users\Duhar\OneDrive\Desktop\Actory\actory-landing\backups-20250510-063750
+
+
+IMPORTANT: Ensure the following content variables are defined with your project's specific content
+This script will attempt to use them. If not defined, warnings will be issued and files may be skipped or empty.
+Example: \ = @'...
+         \ = @'...
+         \ = @'...
+         (and so on for all other files listed in the 'Files to Process' section below)
+
+
+===============================================
+ Starting File Creation/Update Process
+===============================================
+
+Backed up: C:\Users\Duhar\OneDrive\Desktop\Actory\actory-landing\src\app\page.tsx to C:\Users\Duhar\OneDrive\Desktop\Actory\actory-landing\backups-20250510-063750\src\app\page.tsx
+Fixed/Created: src/app/page.tsx
+
+WARNING: Content variable 'layoutContent' for file 'src/app/layout.tsx' is not defined. Skipping.
+
+WARNING: Content variable 'globalCssContent' for file 'src/app/globals.css' is not defined. Skipping.
+
+WARNING: Content variable 'logoComponentContent' for file 'src/components/Logo.tsx' is not defined. Skipping.
+
+WARNING: Content variable 'featureCardComponentContent' for file 'src/components/FeatureCard.tsx' is not defined. Skipping.
+
+WARNING: Content variable 'accordionComponentContent' for file 'src/components/Accordion.tsx' is not defined. Skipping.
+
+WARNING: Content variable 'useCaseCardComponentContent' for file 'src/components/UseCaseCard.tsx' is not defined. Skipping.
+
+WARNING: Content variable 'lottieAnimationComponentContent' for file 'src/components/LottieAnimation.tsx' is not defined. Skipping.
+
+WARNING: Content variable 'tailwindConfigContent' for file 'tailwind.config.js' is not defined. Skipping.
+
+WARNING: Content variable 'postcssConfigContent' for file 'postcss.config.js' is not defined. Skipping.
+
+WARNING: Content variable 'tsconfigJsonContent' for file 'tsconfig.json' is not defined. Skipping.
+
+WARNING: Content variable 'eslintRcJsonContent' for file '.eslintrc.json' is not defined. Skipping.
+
+WARNING: Content variable 'nextConfigContent' for file 'next.config.mjs' is not defined. Skipping.
+
+===============================================
+ Actory.ai Project Fixer Script Finished.
+ Please review output above and the transcript log for details.
+===============================================
+
+**********************
+Windows PowerShell transcript end
+End time: 20250510063750
+**********************

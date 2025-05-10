@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottie Player Sample</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .animation-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+        }
+        .animation-container {
+            height: 300px;
+            width: 100%;
+            background: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        code {
+            display: block;
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lottie Player Implementation Sample</h1>
+    <p>This sample demonstrates the working Lottie animation using lottie-player web component</p>
+    
+    <div class="container">
+        <div class="animation-box">
+            <h2>Basic Animation</h2>
+            <div class="animation-container">
+                <lottie-player 
+                    src="https://lottie.host/b883cdd8-359d-4d58-9311-2727030d937f/o5b67G5Wpn.json" 
+                    background="transparent" 
+                    speed="1" 
+                    loop 
+                    autoplay class="lottie-hero">
+                </lottie-player>
+            </div>
+            <code>
+&lt;script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"&gt;&lt;/script&gt;
+
+&lt;lottie-player 
+    src="https://lottie.host/b883cdd8-359d-4d58-9311-2727030d937f/o5b67G5Wpn.json" 
+    background="transparent" 
+    speed="1" 
+    style="width: 100%; height: 100%;" 
+    loop 
+    autoplay&gt;
+&lt;/lottie-player&gt;
+            </code>
+        </div>
+        
+        <div class="animation-box">
+            <h2>With Controls</h2>
+            <div class="animation-container">
+                <lottie-player 
+                    src="https://lottie.host/b883cdd8-359d-4d58-9311-2727030d937f/o5b67G5Wpn.json" 
+                    background="transparent" 
+                    speed="1" 
+                    loop 
+                    autoplay class="lottie-hero">
+                </lottie-player>
+            </div>
+            <code>
+&lt;lottie-player 
+    src="https://lottie.host/b883cdd8-359d-4d58-9311-2727030d937f/o5b67G5Wpn.json" 
+    background="transparent" 
+    speed="1" 
+    style="width: 100%; height: 100%;" 
+    controls&gt;
+&lt;/lottie-player&gt;
+            </code>
+        </div>
+        
+        <div class="animation-box">
+            <h2>Hover Interaction</h2>
+            <div class="animation-container">
+                <lottie-player 
+                    src="https://lottie.host/b883cdd8-359d-4d58-9311-2727030d937f/o5b67G5Wpn.json" 
+                    background="transparent" 
+                    speed="1" 
+                    loop 
+                    autoplay class="lottie-hero">
+                </lottie-player>
+            </div>
+            <p>Hover over the animation to play it</p>
+            <code>
+&lt;lottie-player 
+    src="https://lottie.host/b883cdd8-359d-4d58-9311-2727030d937f/o5b67G5Wpn.json" 
+    background="transparent" 
+    speed="1" 
+    style="width: 100%; height: 100%;" 
+    hover&gt;
+&lt;/lottie-player&gt;
+            </code>
+        </div>
+    </div>
+    
+    <h2>JavaScript Control Example</h2>
+    <div class="animation-box">
+        <div class="animation-container">
+            <lottie-player 
+                    src="https://lottie.host/b883cdd8-359d-4d58-9311-2727030d937f/o5b67G5Wpn.json" 
+                    background="transparent" 
+                    speed="1" 
+                    loop 
+                    autoplay class="lottie-hero">
+            </lottie-player>
+        </div>
+        <div style="margin-top: 10px;">
+            <button id="play-btn">Play</button>
+            <button id="pause-btn">Pause</button>
+            <button id="stop-btn">Stop</button>
+            <button id="speed-up-btn">Speed Up</button>
+            <button id="speed-down-btn">Speed Down</button>
+        </div>
+        <code>
+// JavaScript control example
+const player = document.querySelector('#controlled-player');
+
+document.querySelector('#play-btn').addEventListener('click', () => {
+    player.play();
+});
+
+document.querySelector('#pause-btn').addEventListener('click', () => {
+    player.pause();
+});
+
+document.querySelector('#stop-btn').addEventListener('click', () => {
+    player.stop();
+});
+
+document.querySelector('#speed-up-btn').addEventListener('click', () => {
+    player.speed = player.speed * 1.5;
+});
+
+document.querySelector('#speed-down-btn').addEventListener('click', () => {
+    player.speed = player.speed / 1.5;
+});
+        </code>
+    </div>
+    
+    <script>
+        // JavaScript control example
+        const player = document.querySelector('#controlled-player');
+        
+        document.querySelector('#play-btn').addEventListener('click', () => {
+            player.play();
+        });
+        
+        document.querySelector('#pause-btn').addEventListener('click', () => {
+            player.pause();
+        });
+        
+        document.querySelector('#stop-btn').addEventListener('click', () => {
+            player.stop();
+        });
+        
+        document.querySelector('#speed-up-btn').addEventListener('click', () => {
+            player.speed = player.speed * 1.5;
+        });
+        
+        document.querySelector('#speed-down-btn').addEventListener('click', () => {
+            player.speed = player.speed / 1.5;
+        });
+    </script>
+</body>
+</html>
+

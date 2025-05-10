@@ -25,7 +25,7 @@ const Accordion = ({ title, children }: AccordionProps) => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      <div className={`overflow-hidden transition-all ${isOpen ? 'max-h-96 py-4' : 'max-h-0'}`}>
+      <div className={`overflow-hidden transition-all ${isOpen ? 'max-h-96 mt-4' : 'max-h-0'}`}>
         {children}
       </div>
     </div>
