@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import React, { useEffect, useRef } from 'react';
 
 interface LottieAnimationProps {
@@ -34,7 +34,7 @@ const LottieAnimation = ({ animationUrl, height = 'h-64 md:h-96' }: LottieAnimat
     };
   }, [animationUrl]);
 
-  return <div ref={containerRef} className={\w-full \\}></div>;
+  return <div ref={containerRef} className={`w-full ${height}`}></div>;
 };
 
 export default LottieAnimation;
